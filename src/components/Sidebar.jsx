@@ -17,7 +17,11 @@ const DesktopSidebar = () => {
     <div className="hidden w-24 min-h-screen p-3 border-r md:p-10 md:w-64 sm:block">
       <div className="sticky left-0 flex flex-col gap-20 top-10">
         <div className="w-full">
-          <img src="./logo.svg" alt="Logo" className="hidden md:block " />
+          <img
+            src="./logo.svg"
+            alt="Logo"
+            className="hidden cursor-pointer md:block"
+          />
           <img src="./mobile-logo.svg" alt="Logo" className="block md:hidden" />
         </div>
         <ul className="flex flex-col items-center gap-8 md:items-start">
