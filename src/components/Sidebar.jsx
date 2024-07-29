@@ -14,20 +14,26 @@ export default Sidebar;
 
 const DesktopSidebar = () => {
   return (
-    <div className="p-3 md:p-10 border-r min-h-screen w-24 md:w-64 hidden sm:block">
-      <div className="flex flex-col gap-20 sticky top-10 left-0">
+    <div className="hidden w-24 min-h-screen p-3 border-r md:p-10 md:w-64 sm:block">
+      <div className="sticky left-0 flex flex-col gap-20 top-10">
         <div className="w-full">
           <img src="./logo.svg" alt="Logo" className="hidden md:block " />
           <img src="./mobile-logo.svg" alt="Logo" className="block md:hidden" />
         </div>
-        <ul className="flex flex-col items-center md:items-start gap-8">
-          <Link to={'/'} className="flex gap-1">
+        <ul className="flex flex-col items-center gap-8 md:items-start">
+          <Link
+            to={'/'}
+            className="flex gap-1 transition-all hover:text-gray-500"
+          >
             <Home size={24} />
-            <span className="font-bold hidden md:block">Home</span>
+            <span className="hidden font-bold md:block">Home</span>
           </Link>
-          <Link to={'/favorites'} className="flex gap-1">
+          <Link
+            to={'/favorites'}
+            className="flex gap-1 transition-all hover:text-gray-500"
+          >
             <Heart size={24} />
-            <span className="font-bold hidden md:block">Favorites</span>
+            <span className="hidden font-bold md:block">Favorites</span>
           </Link>
         </ul>
       </div>
@@ -37,7 +43,7 @@ const DesktopSidebar = () => {
 
 const MobileSidebar = () => {
   return (
-    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-2 sm:hidden">
+    <div className="fixed bottom-0 left-0 z-10 flex justify-center w-full gap-10 p-2 bg-white border-t sm:hidden">
       <Link to={'/'}>
         <Home size={24} className="cursor-pointer" />
       </Link>
